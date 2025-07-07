@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freelancer Job Finder</title>
+    <meta name="description" content="Find freelance jobs from multiple platforms">
+    <meta name="theme-color" content="#4CAF50">
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons/icon-72x72.png">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Freelancer Job Finder</h1>
+            <div class="api-status">
+                <span id="upworkStatus" class="api-indicator">Upwork</span>
+                <span id="freelancerStatus" class="api-indicator">Freelancer</span>
+            </div>
+        </header>
+
+        <main class="app-main">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Enter job keywords...">
+                <select id="platformSelect">
+                    <option value="all">All Platforms</option>
+                    <option value="upwork">Upwork</option>
+                    <option value="freelancer">Freelancer</option>
+                </select>
+                <button id="searchBtn">Search Jobs</button>
+            </div>
+
+            <div class="results-container">
+                <div class="job-list" id="jobList"></div>
+                <div class="job-details" id="jobDetails">
+                    <h2 id="detailTitle">Select a job to view details</h2>
+                    <div class="meta-info">
+                        <span id="detailPlatform"></span>
+                        <span id="detailPrice"></span>
+                        <span id="detailDate"></span>
+                    </div>
+                    <div id="detailSkills"></div>
+                    <p id="detailDescription"></p>
+                    <a id="detailLink" href="#" target="_blank">View on platform</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <button id="installBtn" class="hidden">Install App</button>
+            <div class="offline-status" id="offlineStatus">Offline</div>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
